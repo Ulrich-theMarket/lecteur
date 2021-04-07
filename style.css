@@ -1,0 +1,117 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: lightgray;
+    height: 6vh;
+    text-transform: capitalize;
+}
+
+header p{
+    margin-left: 50px; 
+    font-size: 20px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.content{
+    width: 100%;
+    max-width: 1000px;
+    position: relative;
+    overflow: hidden;
+}
+
+.video{
+    width: 100%;  
+}
+
+#play1::before{
+    content: 'play';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: red;
+    transform: translate(-50%, -50%);
+}
+
+.control{
+    display: flex;
+    flex-wrap: wrap;
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    background: rgb(0,0,0,0.7);
+    transition: all 0.2s;
+}
+
+.control1{
+    transform: translateY(100%) translateY(-5px);
+}
+
+.content:hover .control{
+    transform: translateY(0)
+}
+
+.bar1{
+    height: 8px;
+    
+}
+
+.buttons{
+    padding: 10px;
+}
+
+.buttons button{
+    background: none;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    color: white;
+}
+
+#mute{   
+    position: relative;
+    top: -5px; 
+}
+
+.buttons #play-pause::before{
+    content: 'play';
+    position: relative;
+    top:-5px;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 5px;  
+}
+
+.buttons #play-pause.play::before{
+    content: 'play';
+}
+
+.buttons #play-pause.pause::before{
+    content: 'pause';
+}
+
+.bar{
+    height: 8px;
+    width: 100%;
+    background: black;
+    cursor: pointer;
+    border: 1px solid rgb(82, 79, 79); 
+    border-radius: 10%;
+    margin-left: 5px;
+    margin-right: 5px;
+}

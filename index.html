@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>lecteur-video</title>
+    <meta name="description" content="Lecteur Video">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>lecteur-video</h1>
+      <p>pen by assoa ulrich</p>
+    </header>
+    <div class="container">
+        <div class="content">
+            <video src="img/video.mp4" class="video"></video>
+            <span id="play1"></span>
+            <div class="control">
+                <div class="bar">
+                  <div class="bar1"></div>
+                </div>
+                <div class="buttons">
+                  <button id="play-pause"></button>
+                  <button id="mute">Mute</button>
+                  <input type="range" id="volume" min="0" max="100" value="50" step="1">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="video.js"></script>
+  </body>
+</html>
